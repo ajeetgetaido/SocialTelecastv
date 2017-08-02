@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for Analytics to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions required for GCM -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -36,6 +37,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.rathore.socialtelecast.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.rathore.socialtelecast.CreateFileActivity" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -43,13 +51,6 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
-        </activity>
-        <activity android:name="com.rathore.socialtelecast.CreateFileActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.rathore.socialtelecast.RetrieveContentsActivity" >
 
@@ -73,6 +74,8 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
         <activity android:name="com.rathore.socialtelecast.createGroup" />
+        <activity android:name="com.rathore.socialtelecast.CreateDriveFileActivity" />
+        <activity android:name="com.rathore.socialtelecast.PickFileWithOpenerActivity" />
         <activity android:name="com.rathore.socialtelecast.ParticularGroupMember" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity

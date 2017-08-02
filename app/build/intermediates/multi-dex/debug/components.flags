@@ -1,5 +1,5 @@
--injars /home/ajeet/Downloads/SocialTelecast1-master/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
--outjars /home/ajeet/Downloads/SocialTelecast1-master/app/build/intermediates/multi-dex/debug/componentClasses.jar
+-injars /home/ajeet/Downloads/SocialTelecast1-m/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /home/ajeet/Downloads/SocialTelecast1-m/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
 -libraryjars /home/ajeet/Android/Sdk/build-tools/26.0.0/lib/shrinkedAndroid.jar
 
@@ -10,10 +10,10 @@
 -dontpreverify
 -dontnote **
 -dontwarn **
--printconfiguration /home/ajeet/Downloads/SocialTelecast1-master/app/build/intermediates/multi-dex/debug/components.flags
+-printconfiguration /home/ajeet/Downloads/SocialTelecast1-m/app/build/intermediates/multi-dex/debug/components.flags
 
 
-# view AndroidManifest.xml #generated:31
+# view AndroidManifest.xml #generated:32
 -keep class android.support.multidex.MultiDexApplication {
     <init>(...);
 }

@@ -7,7 +7,6 @@ import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.Result;
 import com.google.android.gms.drive.Drive;
 
 import java.util.concurrent.CountDownLatch;
@@ -25,7 +24,7 @@ public abstract class ApiClientAsyncTask<Params, Progress, Result> extends Async
                 .addScope(Drive.SCOPE_FILE);
         mClient = builder.build();
     }
-
+//kfymud test
     @Override
     protected final Result doInBackground(Params... params) {
         Log.d("TAG", "in background");

@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private DbHelper db;
     private Button btnNext;
     private RecyclerView recyclerViewDetail;
+    private Button btnCreateFileMain;
     // public static final String EXISTING_FOLDER_ID = "0B2EEtIjPUdX6MERsWlYxN3J6RU0";
 
     @Override
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         setContentView(R.layout.activity_main);
         db = new DbHelper(MainActivity.this);
 
-        Log.i("oncreate", "called");
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(Drive.API)
                 //.setAccountName("vinitashekhawat7@gmail.com")
@@ -57,6 +58,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 //        super.onStart();
 //        mGoogleApiClient.connect();
 //    }
+
+        btnCreateFileMain = (Button) findViewById(R.id.btnCreatefile);
+        btnCreateFileMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ipos = new Intent(getApplicationContext() , CreateDriveFileActivity.class);
+                startActivity(ipos);
+            }
+        });
+
 
         setGroupAdapter();
 
